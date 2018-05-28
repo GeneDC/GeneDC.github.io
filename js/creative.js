@@ -1,3 +1,15 @@
+
+function toggleBox() {
+    var x = document.getElementById("toggle-box");
+    if (x.style.display != "block") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+
+
 (function($) {
   "use strict"; // Start of use strict
 
