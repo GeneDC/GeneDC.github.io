@@ -45,226 +45,94 @@
       </div>
     </nav>
 
-	<!--
-    <header class="masthead text-center text-white d-flex">
+	
+    <header class="masthead1 text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
 		
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>Your Favorite Source of Free Bootstrap Themes</strong>
+              <strong>Spectral Mafia Jam</strong>
             </h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
+            <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
           </div>
 		
         </div>
       </div>
     </header>
-	-->
 	
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">About Me</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Hello, my name is Gene and I'm a game programmer. I'm currently studying game programming at AIE Melbourne.</p>
-			<p class="text-faded mb-4">I love working on all parts of games, especially colaborating with designers to create and refine outstanding mechanics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
+	<section id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">My Projects</h2>
-            <hr class="my-4">
+			<h5 class="mb-0">
+			<strong>Overview</strong>
+			</h5>
+			<p class="text-muted mb-0">Spectral Mafia Jam was the randomly selected theme for our team that we spent 2.5 days working on in Unity.</p>
+			<h5 class="mb-0">
+			<strong>My Roles</strong>
+			</h5>
+			<p class="mb-0">
+			<strong>Player controls and movement</strong>
+			</p> 
+			<p class="text-muted mb-0">The players have a CharacterController component that I move using <a href="https://github.com/speps/XInputDotNet" target="_blank">XInputDotNet</a> for Microsoft Xbox controller</p>
+			<p class="mb-0">
+			<strong>Game juice</strong>
+			</p> 			
+			<p class="text-muted mb-0"> playing particles. I created the aim line by setting raycasting from the gun to walls to set the position of the LineRenderer component. </p>
+			<p class="mb-0">
+			<strong>Bullets and jars</strong>
+			</p> 	
+			<p class="text-muted mb-0">When the player shoots a bullet is created with its velocity</p>
+			<p class="mb-0">
+			<strong>Enemy Spawning</strong>
+			</p> 	
+			<p class="text-muted mb-0">Enemy Spawning.</p>
+			<div class="col-lg-12">
+			  <p></p>
+			  <h5>Video of the game</h5>
+			  <iframe width="650" height="350"
+			    src="https://www.youtube.com/embed/MzTcAK6Tj5k">
+			  </iframe>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-          <div class="col-lg-4 col-sm-6">
-		    <a class="portfolio-box" href="https://github.com/jakemakesgames/SpectralMafiaJam" target="_blank">
-            <img type="image" src="img/portfolio/thumbnails/1.jpg" class="img-fluid" onclick="toggleBox()">
-		      <div class="portfolio-box-caption">
-	  	  	    <div class="portfolio-box-caption-content">
-		  	      <div class="project-category text-faded">
-		  		    Game Jam
-		  	      </div>
-			      <div class="project-name">
-				    Spectral Mafia Jam
-			      </div>
-				</div>
-		      </div>
-			</a>
-			<div class="text-center">
-			  <div class="service-box mt-5 mx-auto">
-				<h3 class="mb-3">Spectral Mafia Jam</h3>
-				<p class="text-muted mb-0">Spectral Mafia Jam was the randomly selected theme for our team that we spent 2.5 days working on in Unity.</p>
-				<h5 class="mb-0">My Roles</h5>
-				<p class="text-muted mb-0">Player controls and movement.</p>
-				<p class="text-muted mb-0">Game juice (e.g. playing particles, player aim line.)</p>
-				<p class="text-muted mb-0">Bullets and jars.</p>
-				<p class="text-muted mb-0">Enemy Spawning.</p>
-				<h5><a href="https://youtu.be/MzTcAK6Tj5k">Video of the game.</a></h5>
-			  </div>
-			</div>
-		  </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://bitbucket.org/GeneCollis/goap" target="_blank">
-			<img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    AI system
-                  </div>
-                  <div class="project-name">
-                    Distributable Goal Oriented Action Planning system
-                  </div>
-                </div>
-              </div>
-            </a>
-			<div class="text-center">
-			  <div class="service-box mt-5 mx-auto">
-				<h3 class="mb-3">Goal Oriented Action Planning</h3>
-				<p class="text-muted mb-0">I created a GOAP system in C++</p>
-				<h5 class="mb-0">Features</h5>
-				<p class="text-muted mb-0">Templated world values.</p>
-				<p class="text-muted mb-0">Cyclic graph in planning stage.</p>
-				<p class="text-muted mb-0">Dijkstra's to find the best plan.</p>
-			  </div>
-			</div>
-          </div>
-		  <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://github.com/GeneDC/Engine" target="_blank">
-			<img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Game Engine
-                  </div>
-                  <div class="project-name">
-                    OpenGL game engine made in C++
-                  </div>
-                </div>
-              </div>
-            </a>
-			<div class="text-center">
-			  <div class="service-box mt-5 mx-auto">
-				<h3 class="mb-3">Game Engine</h3>
-				<p class="text-muted mb-0">I am creating a OpenGL game engine in C++</p>
-				<h5 class="mb-0">Features</h5>
-				<p class="text-muted mb-0">OBJ file loading and serialization for faster loading.</p>
-				<p class="text-muted mb-0">Rendering models with diffuse, normal, and specular textures.</p>
-				<p class="text-muted mb-0">Lighting using a phong shader model.</p>
-				<p class="text-muted mb-0">Post-Processing and Render Targets with HDR.</p>
-			  </div>
-			</div>
-          </div>
-		</div>
-	  </div>	  
-		  <!--
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-	  -->
-    </section>	
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Contact</h2>
-            <hr class="my-4">
-            <p class="mb-5"><!--Want to add me to your team? That's great! -->Send me an email and I will get back to you as soon as possible!</p>
-          </div>
-        </div>
-        <div class="row">
-		  <div class="col-lg-4 col-sm-6 text-center">
-		    <a href="https://github.com/GeneDC" target="_self">
-              <img class="fa fa-envelope-o fa-3x mb-3 sr-contact" src="img/GitHub-Logo.jpg">
-			  <p>GitHub</p>
-			</a>
-          </div>
-          <div class="col-lg-4 col-sm-6 text-center">
-		    <a href="mailto:genecollis12@gmail.com" target="_self">
-            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-            <p>genecollis12@gmail.com</p>
-			</a>
-          </div>
-		  <div class="col-lg-4 col-sm-6 text-center">
-		    <a href="https://twitter.com/GeneCollis" target="_self">
-              <img class="fa fa-envelope-o fa-3x mb-3 sr-contact" src="img/Twitter-Logo.jpg">
-			  <p>Twitter</p>
-			</a>
-          </div>
-        </div>
-      </div>
+      </div>  
+
+    <!-- <section id="contact"> -->
+      <!-- <div class="container"> -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col-lg-8 mx-auto text-center"> -->
+            <!-- <h2 class="section-heading">Contact</h2> -->
+            <!-- <hr class="my-4"> -->
+            <!-- <p class="mb-5">Want to add me to your team? That's great! Send me an email and I will get back to you as soon as possible!</p> -->
+          <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+		  <!-- <div class="col-lg-4 col-sm-6 text-center"> -->
+		    <!-- <a href="https://github.com/GeneDC" target="_self"> -->
+              <!-- <img class="fa fa-envelope-o fa-3x mb-3 sr-contact" src="img/GitHub-Logo.jpg"> -->
+			  <!-- <p>GitHub</p> -->
+			<!-- </a> -->
+          <!-- </div> -->
+          <!-- <div class="col-lg-4 col-sm-6 text-center"> -->
+		    <!-- <a href="mailto:genecollis12@gmail.com" target="_self"> -->
+            <!-- <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i> -->
+            <!-- <p>genecollis12@gmail.com</p> -->
+			<!-- </a> -->
+          <!-- </div> -->
+		  <!-- <div class="col-lg-4 col-sm-6 text-center"> -->
+		    <!-- <a href="https://twitter.com/GeneCollis" target="_self"> -->
+              <!-- <img class="fa fa-envelope-o fa-3x mb-3 sr-contact" src="img/Twitter-Logo.jpg"> -->
+			  <!-- <p>Twitter</p> -->
+			<!-- </a> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
     </section>
 
     <!-- Bootstrap core JavaScript -->
