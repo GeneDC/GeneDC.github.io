@@ -230,6 +230,10 @@ header.masthead1 {
   max-width: 400px;
 }
 
+.project-info-section {
+	max-width: 600px;
+}
+
 #toggle-box {
   position: relative;
   display: none;

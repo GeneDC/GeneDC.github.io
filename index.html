@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gene Collis</title>
+    <title>Gene Collis | Game Programmer Portfolio</title>
 	<link rel="icon" href="img/icon16.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -51,7 +51,8 @@
       </div>
     </nav>
 	
-    <header class="masthead text-center text-white d-flex">
+	<!-- Intro / about -->
+    <header id="about" class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
 		
@@ -65,14 +66,15 @@
             <p class="text-faded mb-5">
 			Hello, my name is Gene and I'm a game programmer. I'm currently studying game programming at AIE Melbourne.
 			<br/>
-			I love working on all parts of games, especially colaborating with designers to create and refine outstanding mechanics.
+			I love working on all aspects of games, especially colaborating with designers to create and refine outstanding mechanics.
 			</p>
             <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
           </div>
         </div>
       </div>
     </header>
-
+	
+	<!-- Projects -->
     <section id="portfolio">
       <div class="container">
         <div class="row">
@@ -85,7 +87,7 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters">
           <div class="col-lg-4 col-sm-6">
-		    <a class="portfolio-box" href="spectral-marfia-jam.html"  title="Project Page">
+		    <a class="portfolio-box" href="spectral-marfia-jam.html" title="Project Page">
             <img type="image" src="img/portfolio/thumbnails/1.jpg" class="img-fluid">
 		      <div class="portfolio-box-caption">
 	  	  	    <div class="portfolio-box-caption-content">
@@ -100,13 +102,9 @@
 			</a>
 			<div class="text-center">
 			  <div class="service-box mt-5 mx-auto">
-				<h3 class="mb-3">
-				<strong>Spectral Mafia Jam</strong>
-				</h3>
+				<h3 class="mb-3"><strong>Spectral Mafia Jam</strong></h3>
 				<p class="text-muted mb-0">Spectral Mafia Jam was the randomly selected theme for our team that we spent 2.5 days working on in Unity.</p>
-				<h5 class="mb-0">
-				<strong>My Roles</strong>
-				</h5>
+				<h5 class="mb-0"><strong>My Roles</strong></h5>
 				<p class="text-muted mb-0">Player controls and movement.</p>
 				<p class="text-muted mb-0">Game juice (e.g. playing particles, player aim line.)</p>
 				<p class="text-muted mb-0">Bullets and jars.</p>
@@ -116,7 +114,7 @@
 			</div>
 		  </div>
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://bitbucket.org/GeneCollis/goap" title="Project Page" target="_blank">
+            <a class="portfolio-box" href="goap.html" title="Project Page">
 			<img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
@@ -131,13 +129,9 @@
             </a>
 			<div class="text-center">
 			  <div class="service-box mt-5 mx-auto">
-				<h3 class="mb-3">
-				<strong>Goal Oriented Action Planning</strong>
-				</h3>
-				<p class="text-muted mb-0">I created a GOAP system in C++</p>
-				<h5 class="mb-0">
-				<strong>Features</strong>
-				</h5>
+				<h3 class="mb-3"><strong>Goal Oriented Action Planning</strong></h3>
+				<p class="text-muted mb-0">I created a distributable GOAP system in C++</p>
+				<h5 class="mb-0"><strong>Features</strong></h5>
 				<p class="text-muted mb-0">Templated world values.</p>
 				<p class="text-muted mb-0">Cyclic graph in planning stage.</p>
 				<p class="text-muted mb-0">Dijkstra's to find the best plan.</p>
@@ -160,13 +154,9 @@
             </a>
 			<div class="text-center">
 			  <div class="service-box mt-5 mx-auto">
-				<h3 class="mb-3">
-				<strong>Game Engine</strong>
-				</h3>
+				<h3 class="mb-3"><strong>Game Engine</strong></h3>
 				<p class="text-muted mb-0">I am creating a OpenGL game engine in C++</p>
-				<h5 class="mb-0">
-				<strong>Features</strong>
-				</h5>
+				<h5 class="mb-0"><strong>Features</strong></h5>
 				<p class="text-muted mb-0">OBJ file loading and serialization for faster loading.</p>
 				<p class="text-muted mb-0">Rendering models with diffuse, normal, and specular textures.</p>
 				<p class="text-muted mb-0">Lighting using a phong shader model.</p>
@@ -176,72 +166,10 @@
           </div>
 		</div>
 	  </div>	  
-		  <!--
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="https://www.google.com" target="_blank">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-	  -->
+
     </section>	
 	
+	<!-- Contact info -->
     <section class="bg-primary" id="contact">
       <div class="container">
         <div class="row">

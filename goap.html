@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gene Collis | Spectral Mafia Jam</title>
+    <title>Gene Collis | GOAP</title>
 	<link rel="icon" href="img/icon16.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,20 +51,20 @@
       </div>
     </nav>
 
-    <header id="about" class="masthead1 text-center text-white d-flex">
+    <header id="about" class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>Spectral Mafia Jam</strong>
+              <strong>Goal Oriented Action Planning</strong>
             </h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-faded mb-5">
-			Each team was given a randomly selected theme, the team I was in got Spectral Mafia Jam. We spent two and a half days working on the game from scratch in Unity using C#. 
+			Goal Oriented Action Planning (GOAP for short) is an Artificial Intelligence system where a agent has a list of actions that they can perform, when given a goal the agent will find the best plan using those actions to acheive the goal.
 			<br/>
-			Spectral Marfia Jam is a 1-2 player twin stick shooter where you are at a abandoned mansion to eradicate the ghost marfia that is haunting the place.
+			<!-- A GOAP system allows advanced decisions to be made in order to achieve a goal. The GOAP planner creates a plan that is the fastest and most efficient method to accomplish a specific goal. It does this by considering all possible paths that complete the given goal. -->
 			</p>
             <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Button</a> -->
           </div>
@@ -82,35 +82,23 @@
 	  </div>
         <div class="col-lg-4 col-sm-6">
 		  <div class="project-info-section text-center mt-5 mx-auto">
-		    <h5 class="mb-0 text-center">
-		    <strong>My Roles</strong>
-		    </h5>
-		    <p class="mb-0">
-		    <strong>Player controls and movement</strong>
-		    </p> 
-		    <p class="text-muted mb-0">The players have a CharacterController component that I move using <a href="https://github.com/speps/XInputDotNet" target="_blank">XInputDotNet</a> for Microsoft Xbox controller</p>
-		    <p class="mb-0">
-		    <strong>Game juice</strong>
-		    </p> 			
+		    <h5 class="mb-0 text-center"><strong>Features</strong></h5>
+		    <p class="mb-0"><strong>Templated world values</strong></p> 
 		    <p class="text-muted mb-0">
-		    I added the code to create and destroy ParticleSystems.
-		    <br/>
-		    I programed the aim line by raycasting from the gun to set the positions of the LineRenderer component. </p>
-		    <p class="mb-0">
-		    <strong>Bullets and jars</strong>
-		    </p> 	
-		    <p class="text-muted mb-0">I worked with Rigidbodies, Colliders, and collision layers so that the bullets would act as required.</p>
-		    <p class="mb-0">
-		    <strong>Enemy Spawning</strong>
-		    </p> 	
-		    <p class="text-muted mb-0">The enemys are spawned at the children of the GameObject that the spawn script is attached to when the collider is triggered.</p>
+			I needed a light weight Varient type so I could store a list of different typed values in my WorldState, for this I used a inheratance with a interface and templating. 
+			<a href="https://bitbucket.org/GeneCollis/goap/src/master/aieBootstrap-master/GOAP/WorldValue.h" title="WorldValue.h" target="_blank">Source File</a>
+			</p>
+		    <p class="mb-0"><strong>Cyclic graph in planning stage</strong></p> 			
+		    <p class="text-muted mb-0">
+			When planning the GOAP planner looks at every action that can be performed on the current world state and creates a graph node for that resulting world state, then adds an edge with the action perfromed.
+			<br/>
+			This process is repeated on every resulting world state and for any reoccurring world states the a node is not added but the existing node with that world state is connected instead.
+			</p>
+			<p class="mb-0"><strong>Dijkstra's to find the best plan</strong></p>
+		    <p class="text-muted mb-0">Once the graph is created I use Dijkstra's to search and find the path of actions that results in a goal meeting world state.</p>
 		  </div>
 		  <div class="text-center">
-		    <p><p/>
-		    <!-- <h5><strong>Video of the game</strong></h5> -->
-		    <iframe width="650" height="350"
-		      src="https://www.youtube.com/embed/MzTcAK6Tj5k">
-		    </iframe>
+		    <a href="https://bitbucket.org/GeneCollis/goap/src/master/aieBootstrap-master/GOAP/" title="Project Source" target="_blank"><h5><strong>Source Code</strong></h5>
           </div>
         </div>
 	</div>
