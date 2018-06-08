@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gene Collis | EnGene</title>
+    <title>Gene Collis | OpenGL Engine</title>
 	<link rel="icon" href="img/icon16.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -80,14 +80,18 @@
         <div class="col-lg-4 col-sm-6">
 		  <div class="project-info-section text-center mt-5 mx-auto">
 		    <h5 class="mb-0 text-center"><strong>Features</strong></h5>
-		    <p class="mb-0"><strong>OBJ file loading and serialization for faster loading</strong></p> 
-		    <p class="text-muted mb-0">words</p>
-		    <p class="mb-0"><strong>Rendering models with diffuse, normal, and specular textures</strong></p> 			
-		    <p class="text-muted mb-0">words</p>
-		    <p class="mb-0"><strong>Lighting using a phong shader model</strong></p> 	
-		    <p class="text-muted mb-0">words</p>
+		    <p class="mb-0"><strong>OBJ file loading and serialization</strong></p> 
+		    <p class="text-muted mb-0">After a .obj file is loaded in, the data is saved in a binary file so when it is loaded next time it can read the binary file and save lots of loading time.</p>
+		    <p class="mb-0"><strong>Rendering textured models</strong></p> 			
+		    <p class="text-muted mb-0">After the models and textures are loaded in, they are rendered with a shader that takes in textures to output the texture colour.</p>
+		    <p class="mb-0"><strong>Lighting</strong></p> 	
+		    <p class="text-muted mb-0">I implemented lighting using the phong shading model. This gives a nice effect without being too taxing on the GPU.</p>
 		    <p class="mb-0"><strong>Post-Processing and Render Targets with HDR</strong></p> 	
-		    <p class="text-muted mb-0">words</p>
+		    <p class="text-muted mb-0">
+			After implementing render targets I am able to calculate higher light values then remap them to 0-1 to create HDR.
+			<br/>
+			I multiple render targets set up so I can render out different textures e.g. a bright light texture to blur and add bloom to the scene.
+			</p>
 		  </div>
 
 		  <!-- <video autoplay="autoplay" controls loop="loop" width="650" height="350"> -->
