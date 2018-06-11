@@ -69,15 +69,19 @@
       </div>
     </header>
     <div class="container p-0">
-      <div class="row no-gutters">
-		<div class="project-info-section text-center mt-5 mx-auto">
+      <div class="row">
+		<div class="col-lg-8 text-center mt-4 mx-auto">
 		  <h5 class="mb-0 text-center"><strong>Features</strong></h5>
+		  <br/>
 		  <p class="mb-0"><strong>OBJ file loading and serialization</strong></p> 
 		  <p class="text-muted mb-0">After a .obj file is loaded in, the data is saved in a binary file so when it is loaded next time it can read the binary file and save lots of loading time.</p>
+		  <br/>
 		  <p class="mb-0"><strong>Rendering textured models</strong></p> 			
 		  <p class="text-muted mb-0">After the models and textures are loaded in, they are rendered with a shader that takes in textures to output the texture colour.</p>
+		  <br/>
 		  <p class="mb-0"><strong>Lighting</strong></p> 	
 		  <p class="text-muted mb-0">I implemented lighting using the phong shading model. Currently I have directional lights implemented but plan to add more light types and shadows.</p>
+		  <br/>
 		  <p class="mb-0"><strong>Post-Processing and Render Targets with HDR</strong></p> 	
 		  <p class="text-muted mb-0">
 		  After implementing render targets I am able to calculate higher light values then remap them to 0-1 to create a High Dynamic Range that is adjustable with the exposure level.
