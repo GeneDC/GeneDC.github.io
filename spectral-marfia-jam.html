@@ -78,7 +78,7 @@
 		  <h5 class="mb-0 text-center"><strong>My Roles</strong></h5>
 		  <br/>
 		  <p class="mb-0"><strong>Player controls and movement</strong></p> 
-		  <p class="text-muted mb-0">The players have a CharacterController component that I move using <a href="https://github.com/speps/XInputDotNet" target="_blank">XInputDotNet</a> for Microsoft Xbox controller</p>
+		  <p class="text-muted mb-0">The players have a CharacterController component that I move and rotate using the sticks on a Xbox controller. You can see  <a href="https://github.com/speps/XInputDotNet" target="_blank">XInputDotNet</a> for Microsoft Xbox controller.</p>
 		  <br/>
 		  <p class="mb-0"><strong>Game juice</strong></p> 			
 		  <p class="text-muted mb-0">
@@ -100,6 +100,97 @@
 	  src="https://www.youtube.com/embed/MzTcAK6Tj5k">
 	</iframe>
 	</div>
+    <div class="container p-0">
+      <div class="row">
+		<div class="col-lg-8 mt-4 mx-auto">
+		<p class="mb-0 text-center"><strong>Player Movement Code Snippet</strong></p> 	
+			  <pre class="prettyprint linenums">
+void Movement()
+{
+    // Make the player fall
+    cc.Move(new Vector3(0, -fallSpeed * Time.deltaTime, 0));
+
+    Vector3 moveDirection = Vector3.zero;
+    Vector3 lookDirection = Vector3.zero;
+    bool sprint = true;
+    // If this player is using mouse and keyboard controls 
+    if (useKeyboardControls)
+    {
+        // PC Movement
+        if (Input.GetKey(KeyCode.W))
+            moveDirection.z++;
+        if (Input.GetKey(KeyCode.S))
+            moveDirection.z--;
+        if (Input.GetKey(KeyCode.D))
+            moveDirection.x++;
+        if (Input.GetKey(KeyCode.A))
+            moveDirection.x--;
+
+        // Sprint if left shift is down
+        sprint = Input.GetKey(KeyCode.LeftShift);
+
+
+        // Raycast to find the look direction
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Plane plane = new Plane(Vector3.up, transform.position);
+        float enter;
+        // If the ray hit
+        if (plane.Raycast(ray, out enter))
+        {
+            // Get the point in the ray that hit the plane
+            Vector3 hitPos = ray.GetPoint(enter);
+            // Set the look direction from the player to that position
+            lookDirection = hitPos - transform.position;
+            lookDirection.y = 0;
+        }
+
+        // Can't shoot when sprinting, look in the direction of movement
+        if (sprint == true)
+        {
+            lookDirection = moveDirection;
+            canShoot = false;
+        }
+    }
+    else // Else this player is using controller input
+    {
+        Vector3 leftStickDirection = Vector3.zero;
+        // Left stick movement
+        leftStickDirection.x = XCI.GetAxis(XboxAxis.LeftStickX, controllerNumber);
+        leftStickDirection.z = XCI.GetAxis(XboxAxis.LeftStickY, controllerNumber);
+        // Make sure the movement is normalized
+        leftStickDirection = leftStickDirection.normalized;
+        // Set the move direction to the left stick
+        moveDirection = leftStickDirection;
+        // Set the look direction to the left stick
+        lookDirection = leftStickDirection;
+
+        // Right stick
+        Vector3 rightStickDirection = Vector3.zero;
+        rightStickDirection.x = XCI.GetAxis(XboxAxis.RightStickX, controllerNumber);
+        rightStickDirection.z = XCI.GetAxis(XboxAxis.RightStickY, controllerNumber);
+        // Prioritize right stick for rotation
+        if (rightStickDirection.x != 0 || rightStickDirection.z != 0)
+        {
+            lookDirection = rightStickDirection;
+            // Don't sprint if this player is aiming with the right stick
+            sprint = false;
+        }
+
+    }
+	
+    // Make sure they are only direction with no magnitude
+    moveDirection = moveDirection.normalized;
+    lookDirection = lookDirection.normalized;
+
+    // Lerp the current looking direction to the desired direction
+    bodyRotation = Vector3.Lerp(bodyRotation, lookDirection, rotateSpeed * Time.deltaTime);
+    // Rotate the player
+    transform.LookAt(transform.position + bodyRotation);
+    // Move the player, use sprint speed if this player is sprinting
+    cc.Move(moveDirection * (sprint ? sprintSpeed : moveSpeed) * Time.deltaTime);
+}
+		  </pre>
+	</div></div></div>
 	<!-- Contact info -->
     <section class="bg-primary" id="contact">
       <div class="container">
@@ -146,7 +237,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.js"></script>
-
+	
+	<!-- Embeddable script to show code snippits  -->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
   </body>
 
 </html>

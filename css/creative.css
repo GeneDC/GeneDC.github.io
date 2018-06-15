@@ -234,12 +234,20 @@ header.masthead1 {
 	max-width: 600px;
 }
 
-#toggle-box {
+.toggle-box {
   position: relative;
   display: none;
-	margin: 0 auto;
-	padding-bottom: 0;
-	padding-top: 0;
+  margin: 0 auto;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.toggle-box .visible {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .portfolio-box {
