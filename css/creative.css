@@ -225,6 +225,16 @@ header.masthead1 {
   -o-background-size: cover;
   background-size: cover;
 }
+header.masthead2 {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("../img/divideHeader.jpg");
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .service-box {
   max-width: 400px;
