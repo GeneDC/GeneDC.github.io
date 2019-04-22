@@ -81,13 +81,13 @@
 		  </br>
 		  <p class="mb-0"><strong>Templated world values</strong></p> 
 		  <p class="text-muted mb-0">
-		  I needed a light weight Varient type so I could store a list of different typed values in my WorldState, for this I used inheratance with a interface and templating. 
+		  I needed a light weight Variant type so I could store a list of different typed values in my WorldState, for this I used inheritance with a interface and templating. 
 		  <a href="https://bitbucket.org/GeneCollis/goap/src/master/aieBootstrap-master/GOAP/WorldValue.h" title="WorldValue.h" target="_blank">Source File</a>
 		  </p>
 		  </br>
 		  <p class="mb-0"><strong>Cyclic graph in planning stage</strong></p> 			
 		  <p class="text-muted mb-0">
-		  When planning the GOAP planner looks at every action that can be performed on the current world state and creates a graph node for that resulting world state, then adds an edge with the action perfromed.
+		  When planning the GOAP planner looks at every action that can be performed on the current world state and creates a graph node for that resulting world state, then adds an edge with the action performed.
 		  <br/>
 		  This process is repeated on every resulting world state and for any reoccurring world states the a node is not added but the existing node with that world state is connected instead.
 		  </p>
