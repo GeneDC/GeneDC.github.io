@@ -54,7 +54,7 @@
       </div>
     </nav>
 
-    <header id="about" class="masthead3 text-center text-white d-flex">
+    <header id="about" class="masthead3 text-center text-lightgrey d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -62,10 +62,10 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">
-			.
+            <p class="text-faded mb-5 text-lightgrey">
+			I and 13 other co-founders at Mana Tea started creating Unfamiliar in January 2019.
 			<br/>
-			.
+			Working full-time on Unfamiliar 
 			</p>
           </div>
         </div>
@@ -76,20 +76,29 @@
 		<div class="col-lg-8 text-center mt-4 mx-auto">
 		  <h5 class="mb-0 text-center"><strong>My Roles</strong></h5>
 		  <br/>
-		  <p class="mb-0"><strong>a</strong></p> 
-		  <p class="text-muted mb-0">a.</p>
-		  <p class="text-muted mb-0">b.</p>
+		  <p class="mb-0"><strong>Player controller</strong></p>
+		  <p class="text-muted mb-0">Moves around the world on the graph and interacts with items.</p>
+		  <p class="text-muted mb-0">Integrated animations including idle, walk, run, and jump.</p>
+		  <p class="text-muted mb-0">Move to a point from a click on screen, or move in a direction based on joystick input.</p>
+		  <iframe src="https://cdn.discordapp.com/attachments/549211681209712641/613187217812094977/Cat_Jumping_15m.gif" width="356" height="246" frameBorder="0" ></iframe>
 		  <br/>
-		  <p class="mb-0"><strong>b</strong></p> 			
-		  <p class="text-muted mb-0">a.</p>
-		  <p class="text-muted mb-0">b.</p>
+		  <p class="mb-0"><strong>Movement Graph</strong></p>
+		  <p class="text-muted mb-0">Consists of three graphs, 'player movement', 'camera position', and 'camera look'.</p>
+		  <p class="text-muted mb-0">Allows the player and camera to move smoothly around the world with Bezeir curves.</p>
+		  <p class="text-muted mb-0">Raycasting to the graph. In order to move to a point the player clicks, we've created all the necessary maths functions to calculate the nearest point on any curve, from a ray.</p>
+		  <p class="text-muted mb-0">A* path finding. Once a point on the graph is found, a path is generated to reach it.</p>
 		  <br/>
-		  <p class="mb-0"><strong>c</strong></p> 	
-		  <p class="text-muted mb-0">a.</p>
+		  <p class="mb-0"><strong>Level editor tools</strong></p>
+		  <p class="text-muted mb-0">The graph was built up from scratch.</p>
+		  <p class="text-muted mb-0">I've created many important tools for manipulating the graph.</p>
+		  <p class="text-muted mb-0">Below is an example use for the 'smooth edges on node' function.</p>
+		  <iframe src="https://cdn.discordapp.com/attachments/549211681209712641/606735800092196895/Smooth_Edge.gif" width="538" height="316" frameBorder="0" ></iframe>
 		  <br/>
-		  <p class="mb-0"><strong>d</strong></p> 	
-		  <p class="text-muted mb-0">a.</p>
-		  <p class="text-muted mb-0">b.</p>
+		  <p class="mb-0"><strong>Procedurally generated levels</strong></p>
+		  <p class="text-muted mb-0">Every time you enter the world you are greeted with a different experience.</p>
+		  <p class="text-muted mb-0"><strong>Worlds</strong> are made up of a series of <strong>rooms</strong>, which is made up of a grid of <strong>chunks</strong>.</p>
+		  <!-- <p class="text-muted mb-0">There were many challenges to over come when creating this system.</p> -->
+		  <iframe src="https://media.giphy.com/media/XybUGV4v4oBc1tZy50/giphy.gif" width="311" height="280" frameBorder="0" ></iframe>
 		  <br/>
 		  <p></p>
 		</div>
